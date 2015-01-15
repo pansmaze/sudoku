@@ -1,0 +1,24 @@
+.sudoku-bg {
+    position: absolute;
+    border: 3px solid #000;
+}
+.sudoku-gong {
+    float: left;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+.sudoku-block {
+    position: absolute;
+    text-align: center;
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    background: transparent;
+}
+.sudoku-label {
+
+}
+.sudoku-input {
+    border: none;
+}

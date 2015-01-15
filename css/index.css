@@ -1,0 +1,184 @@
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+    margin: 0;
+    padding: 0;
+    font: 12px/1.5 "Microsoft YaHei", Tahoma, Arial;
+}
+
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+
+/** 重置文本格式元素 **/
+a { text-decoration: none;color: #007baf; }
+a:hover { text-decoration: underline; }
+
+sup { vertical-align: text-top; } /* 重置，减少对行高的影响 */
+sub { vertical-align: text-bottom; }
+
+/** 重置表单元素 **/
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea { font-size: 100%; outline: none;} /* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+
+/* 重置 HTML5 元素 */
+article, aside, details, figcaption, figure, footer,header, hgroup, menu, nav, section,
+summary, time, mark, audio, video {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+mark { background: #ff0; }
+/** end reset css **/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+    cursor: pointer;
+
+}
+button {
+    cursor:pointer;
+    overflow: hidden;
+}
+
+/*清除浮动*/
+.clear-fix:after{
+    content: "\20";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    *zoom: 1;
+}
+/** 全站通用弹出层阴影 **/
+.shade{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #fff;
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    z-index: 99999;
+    top: 0px;
+    left: 0px;
+}
+/** 全站通用弹出层 **/
+.prompt_dialog{
+    position: absolute;
+    z-index: 100001;
+    background: #FFFFFF;
+    /*box-shadow: 0 0 20px 5px rgba(0,0,0,0.5);*/
+    /*border-radius: 5px;*/
+    border: 1px solid #A0A0A0;
+    box-shadow: 3px 3px 3px #ccc;
+}
+.close,
+.hide{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: url(../img/icon/close.png) no-repeat;
+    top: 15px;
+    right: 22px;
+    cursor: pointer;
+}
+.prompt_dialog .header{
+    padding: 0 10px;
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    text-align: left;
+    color: #222;
+}
+.prompt_dialog .d_content{
+    padding: 20px;
+}
+.prompt_dialog .ctrl_line{
+    font-size: 12px;
+    height: 50px;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+    background: #fafafa;
+    overflow: hidden;
+    padding-left: 86px;
+}
+
+/** 全站通用按钮样式 **/
+a.a_btn{
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+a.a_btn:hover{
+    filter:alpha(opacity=85);
+    -moz-opacity: 0.85;
+    -khtml-opacity: 0.85;
+    opacity: 0.85;
+    color: #fff;
+}
+a.gray_90_32:hover{
+    color: #333;
+}
+.red_90_32{
+    border-radius: 4px;
+    font-size: 14px;
+    background: #ea2b32;
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+}
+.gray_90_32{
+    border-radius: 4px;
+    font-size: 14px;
+    background: #ccc;
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+    color: #333;
+}
+.green_90_32{
+    border-radius: 4px;
+    font-size: 14px;
+    background: #4cab47;
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+}
+.green_120_32{
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    background: #4cab47;
+    border-radius: 4px;
+}
+.stage {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+#J-errors {
+    color: #FF5B05;
+    font-size: 30px;
+    text-align: center;
+}
+#J-done {
+    color: green;
+    font-size: 30px;
+    text-align: center;
+    display: none;
+}
